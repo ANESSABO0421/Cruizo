@@ -53,9 +53,9 @@ const Navbar = ({ setShowLogin }) => {
       </div>
 
       {/*button for menu icon in mobile*/}
-      <button onClick={() => setOpen(!open)}>
+      <button onClick={() => setOpen(!open)} aria-label="menu">
         {/*is menu open then show close icon else menu icon */}
-        <img src={open ? assets.close_icon : assets.menu_icon} alt="menu" />
+        <img src={open ? assets.close_icon : assets.menu_icon} alt="menu" className="sm:flex md:hidden lg:hidden"/>
       </button>
     </div>
   );
