@@ -1,9 +1,11 @@
 import React from "react";
 import Title from "./Title";
-import { dummyCarData } from "../assets/assets";
+import { assets, dummyCarData } from "../assets/assets";
 import CarCards from "./CarCards";
+import { useNavigate } from "react-router-dom";
 
 const FeaturedSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center py-24 px-6 md:px-16 lg:px-24 xl:px-32">
       <div>
@@ -22,6 +24,15 @@ const FeaturedSection = () => {
           );
         })}
       </div>
+      <button
+        onClick={() => {
+          navigate("/cars");
+          scrollTo(0, 0);
+        }}
+        className="flex justify-center items-center gap-2 px-6 py-2 border border-borderColor transition-all duration-200 ease-out text-white bg-primary hover:bg-yellow-600 rounded-md mt-18 cursor-pointer "
+      >
+        Explore All Cars <img src={assets.arrow_icon} alt="arrow" />
+      </button>
     </div>
   );
 };

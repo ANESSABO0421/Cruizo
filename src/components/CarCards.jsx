@@ -1,13 +1,22 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const CarCards = ({ car }) => {
   //passing data from the car.jsx
 
   // env variable
   const currency = import.meta.env.VITE_CURRENCY;
+
+  const navigate = useNavigate();
   return (
-    <div className="group rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-500 cursor-pointer">
+    <div
+      onClick={() => {
+        navigate(`/car-details/${car._id}`);
+        scrollTo(0, 0);
+      }}
+      className="group rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-500 cursor-pointer"
+    >
       {/* image of car */}
       <div className="relative h-48 overflow-hidden">
         <img
@@ -46,24 +55,24 @@ const CarCards = ({ car }) => {
         {/* specifications */}
         <div className="mt-4 grid grid-cols-2 gap-y-2 text-gray-600">
           {/* seating */}
-          <div className="flex items-center text-sm text-gray-300">
+          <div className="flex items-center text-sm text-gray-600">
             <img src={assets.users_icon} alt="" className="h-4 mr-2" />
             <span>{car.seating_capacity} Seats</span>
           </div>
           {/* fuel type */}
-          <div className="flex items-center text-sm text-gray-300">
+          <div className="flex items-center text-sm text-gray-600">
             <img src={assets.fuel_icon} alt="" className="h-4 mr-2" />
-            <span>{car.fuel_type} Seats</span>
+            <span>{car.fuel_type} </span>
           </div>
           {/* transmission */}
-          <div className="flex items-center text-sm text-gray-300">
+          <div className="flex items-center text-sm text-gray-600">
             <img src={assets.carIcon} alt="" className="h-4 mr-2" />
-            <span>{car.transmission} Seats</span>
+            <span>{car.transmission}</span>
           </div>
           {/* location */}
-          <div className="flex items-center text-sm text-gray-300">
+          <div className="flex items-center text-sm text-gray-600">
             <img src={assets.location_icon} alt="" className="h-4 mr-2" />
-            <span>{car.location} Seats</span>
+            <span>{car.location} </span>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Title = ({ title, subtitle, align }) => {
       }`}
     >
       <h1 className="font-semibold text-4xl md:text-[40px]">{title}</h1>
-      <p className="text-sm md:text-base text-gray-500/25 mt-2 max-w-156">
+      <p className="text-sm md:text-base text-gray-500 mt-2 max-w-156">
         {subtitle}
       </p>
     </div>

@@ -41,6 +41,7 @@ import car_image2 from "./car_image2.png";
 import car_image3 from "./car_image3.png";
 import car_image4 from "./car_image4.png";
 import Cruizo from "./Cruizo.png";
+import Ferrari from "./Ferrari.png";
 
 export const cityList = [
   "New York",
@@ -94,6 +95,7 @@ export const assets = {
   car_image3,
   car_image4,
   Cruizo,
+  Ferrari,
 };
 
 export const menuLinks = [
