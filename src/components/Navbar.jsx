@@ -14,7 +14,7 @@ const Navbar = ({ setShowLogin }) => {
       }`} //when the path is / returns true then apply the bg color
     >
       <Link>
-        <img src={assets.logo} alt="logo" className="h-8" />
+        <img src={assets.Cruizo} alt="logo" className="h-[100px] w-[100px]" />
       </Link>
 
       <div
@@ -45,7 +45,7 @@ const Navbar = ({ setShowLogin }) => {
           </button>
           <button
             onClick={() => setShowLogin(true)}
-            className="bg-blue-700 rounded-[5px] py-2 px-3  text-white  hover:bg-blue-600 cursor-pointer"
+            className="bg-[#EDAC1A] rounded-[5px] py-2 px-3  text-white  hover:bg-yellow-600 cursor-pointer"
           >
             Login
           </button>

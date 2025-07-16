@@ -6,11 +6,11 @@ const Hero = () => {
   const [pickupLocation, setPickupLocation] = useState("");
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center gap-14 text-center bg-light">
+    <div className="h-screen pt-[100px] flex flex-col justify-center items-center gap-14 text-center bg-light">
       <h1 className="text-4xl md:text-5xl font-semibold">
         Drive Your Dream Car Today
       </h1>
-      <form className="flex flex-col lg:flex-row  md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full bg-white  w-full max-w-80 md:max-w-200 shadow-xl/50">
+      <form className="flex flex-col lg:flex-row  md:flex-row items-start md:items-center justify-around p-6 rounded-lg md:rounded-full bg-white  w-full max-w-80 md:max-w-200 shadow-xl/50">
         <div className="flex flex-col md:flex-row md:items-center lg:flex-row gap-10 min-md:ml-8">
           {/* pickup location */}
           <div className="flex flex-col items-start gap-2">
@@ -19,7 +19,9 @@ const Hero = () => {
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
             >
-              <option value="">Pickup Location</option>
+              <option value="" className="flex justify-start">
+                Pickup Location
+              </option>
               {cityList.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -50,11 +52,16 @@ const Hero = () => {
               required
             />
           </div>
-          {/* search button*/}
-          <button className="hover:bg-blue-700 duration-300 ease-out bg-blue-500 text-white h-[50px] w-[100px] rounded-2xl">
-            Search
-          </button>
         </div>
+        {/* search button*/}
+        <button className="hover:bg-yellow-600 duration-300 ease-out flex  bg-[#EDAC1A] text-white h-[50px] w-[150px] rounded-2xl items-center justify-center gap-2">
+          <img
+            src={assets.search_icon}
+            alt="search icon"
+            className="h-[20px] flex"
+          />
+          Search
+        </button>
       </form>
       <img
         src="/Honda.png"
