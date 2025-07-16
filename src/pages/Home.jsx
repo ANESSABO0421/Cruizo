@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import CarCards from "../components/CarCards";
 import FeaturedSection from "../components/FeaturedSection";
 import Banner from "../components/Banner";
+import Testimonial from "../components/Testimonial";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <Hero />
       <FeaturedSection />
       <Banner/>
+      <Testimonial/>
+      <NewsLetter/>
     </div>
   );
 };

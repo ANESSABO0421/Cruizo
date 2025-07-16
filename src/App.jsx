@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Cars from "./pages/Cars";
 import MyBooking from "./pages/MyBooking";
 import CarDetails from "./pages/CarDetails";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -19,9 +20,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cars" element={<Cars />} />
-        <Route path="/car-details/:id" element={<CarDetails />} />  {/*//passing id for dynamic routing */}
+        <Route path="/car-details/:id" element={<CarDetails />} />{" "}
+        {/*//passing id for dynamic routing */}
         <Route path="/mybooking" element={<MyBooking />} />
       </Routes>
+
+      {!isOwnerPath && <Footer />}
     </>
   );
 };

@@ -17,7 +17,7 @@ const Banner = () => {
           We handle driver screening, payments, and support — you enjoy the
           profits.
         </p>
-        <button className="flex justify-center items-center gap-2 px-6 py-2 border border-borderColor transition-all duration-200 ease-out text-white bg-black hover:bg-yellow-600 rounded-md mt-2 cursor-pointer ">
+        <button className="flex justify-center items-center gap-2 px-6 py-2 border border-borderColor transition-all duration-200 ease-out text-white bg-black hover:bg-white hover:text-black rounded-md mt-2 cursor-pointer ">
           List your Car
         </button>
       </div>
