@@ -8,9 +8,9 @@ const CarDetails = () => {
   const navigate = useNavigate();
   const [car, setCar] = useState(null);
   const currency = import.meta.env.VITE_CURRENCY;
-  const handleSubmit=async(e)=>{
-    e.preventDefault()
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  };
 
   useEffect(() => {
     setCar(dummyCarData.find((car) => car._id === id));
@@ -20,7 +20,7 @@ const CarDetails = () => {
     <div className=" px-6 md:px-16 lg:px-24 xl:px-32 mt-16">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 mb-6 text-gray-500 cursor-pointer"
+        className="flex items-center gap-2 mb-6 text-white cursor-pointer bg-yellow-500 rounded-lg px-4 py-3 hover:-translate-y-1 transition-all hover:shadow-lg/30 duration-500"
       >
         <img
           src={assets.arrow_icon}
@@ -93,7 +93,10 @@ const CarDetails = () => {
           </div>
         </div>
         {/* booking form */}
-        <form onSubmit={handleSubmit} className="shadow-lg/30 h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500">
+        <form
+          onSubmit={handleSubmit}
+          className="shadow-lg/30 h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500"
+        >
           {" "}
           {/*sticky will not work until a  top is given*/}
           <p className="flex justify-between items-center text-2xl text-gray-800 font-semibold">
@@ -121,8 +124,12 @@ const CarDetails = () => {
               required
             />
           </div>
-          <button className="w-full bg-primary rounded-lg px-4 py-3 hover:bg-yellow-600 transition-all ease-out duration-500 text-white hover:-translate-y-1 hover:shadow-xl/30">Book Now</button>
-          <p className="text-sm flex items-center justify-center">No Credit Card required to reserve</p>
+          <button className="w-full bg-primary rounded-lg px-4 py-3 hover:bg-yellow-600 transition-all ease-out duration-500 text-white hover:-translate-y-1 hover:shadow-xl/30">
+            Book Now
+          </button>
+          <p className="text-sm flex items-center justify-center">
+            No Credit Card required to reserve
+          </p>
         </form>
       </div>
     </div>
