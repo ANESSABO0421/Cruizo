@@ -48,7 +48,7 @@ const CarCards = ({ car }) => {
               {car.brand} {car.model}
             </h3>
             <p className="text-sm">
-              {car.category} . {car.year}
+              {car.category} • {car.year}
             </p>
           </div>
         </div>
