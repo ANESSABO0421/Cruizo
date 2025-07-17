@@ -42,11 +42,11 @@ const Cars = () => {
       </div>
       {/* Total Cars display */}
       <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-10">
-        <p>Showing {dummyCarData.length} Cars</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <p className="text-gray-500  max-w-7xl mx-auto">Showing {dummyCarData.length} Cars</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8  ">
           {dummyCarData.map((car, index) => (
             <div key={index}>
-              <CarCards car={car}/>
+              <CarCards car={car} />
             </div>
           ))}
         </div>

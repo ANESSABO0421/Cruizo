@@ -25,7 +25,7 @@ const Navbar = ({ setShowLogin }) => {
         {/*max-sm less than 640px  this is mobile nav*/}
         <Link to="/">Home</Link>
         <Link to="/cars">Cars</Link>
-        <Link to="/my-bookings">My Bookings</Link>
+        <Link to="/mybooking">My Bookings</Link>
         {/*input box */}
         <div className="hidden lg:flex items-center text-sm gap-2  rounded-full border border-borderColor max-w-56 px-3">
           <input

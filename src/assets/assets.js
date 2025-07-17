@@ -223,7 +223,7 @@ export const dummyMyBookingsData = [
     pickupDate: "2025-06-13T00:00:00.000Z",
     returnDate: "2025-06-14T00:00:00.000Z",
     status: "confirmed",
-    price: 440,
+    price: 44000,
     createdAt: "2025-06-10T12:57:48.244Z",
   },
   {
@@ -234,7 +234,7 @@ export const dummyMyBookingsData = [
     pickupDate: "2025-06-12T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "pending",
-    price: 130,
+    price: 13000,
     createdAt: "2025-06-10T12:57:25.613Z",
   },
   {
@@ -245,7 +245,7 @@ export const dummyMyBookingsData = [
     pickupDate: "2025-06-11T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "pending",
-    price: 600,
+    price: 60000,
     createdAt: "2025-06-10T09:55:06.379Z",
   },
   {
@@ -256,7 +256,7 @@ export const dummyMyBookingsData = [
     pickupDate: "2025-06-11T00:00:00.000Z",
     returnDate: "2025-06-12T00:00:00.000Z",
     status: "confirmed",
-    price: 440,
+    price: 44000,
     createdAt: "2025-06-10T09:44:25.410Z",
   },
 ];
