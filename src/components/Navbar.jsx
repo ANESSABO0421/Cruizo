@@ -38,8 +38,8 @@ const Navbar = ({ setShowLogin }) => {
         {/*buttons */}
         <div className="flex max-sm:flex-col max-sm:items-start items-start gap-5">
           <button
-            onClick={() => navigate("/owner")}
-            className=" rounded-[5px] py-2  "
+            onClick={() => navigate("owner")}
+            className=" rounded-[5px] py-2  cursor-pointer"
           >
             Dashboard
           </button>
