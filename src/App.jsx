@@ -11,6 +11,7 @@ import AddCar from "./pages/owner/AddCar";
 import Dashboard from "./pages/owner/Dashboard";
 import ManageBookings from "./pages/owner/ManageBookings";
 import ManageCars from "./pages/owner/ManageCars";
+import Login from "./components/Login";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <>
       {/*passing  the first setShowlogin to navbar as prop and the {setShowLogin} as the state to update*/}
+      {showLogin && <Login setShowLogin={setShowLogin} />}
       {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
       {/*if it is not owner path then dot show the navbar */}
 
@@ -28,7 +30,6 @@ const App = () => {
         <Route path="/car-details/:id" element={<CarDetails />} />{" "}
         {/*//passing id for dynamic routing */}
         <Route path="/mybooking" element={<MyBooking />} />
-        
         {/* owner path nested */}
         <Route path="/owner" element={<Layout />}>
           <Route index element={<Dashboard />} />
