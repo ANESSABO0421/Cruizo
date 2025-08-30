@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { assets, dummyUserData, ownerMenuLinks } from "../../assets/assets";
 import { NavLink, useLocation } from "react-router-dom";
 
+
 const Sidebar = () => {
   const [image, setImage] = useState("");
   const user = dummyUserData;
