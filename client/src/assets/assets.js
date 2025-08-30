@@ -197,7 +197,7 @@ export const dummyCarData = [
   {
     _id: "68009c93a3f5fc6338ea7e34",
     owner: "67fe3467ed8a8fe17d0ba6e2",
-    brand: "Ford",
+    brand: "Chevrolet",
     model: "Camaro",
     image: car_image4,
     year: 2024,

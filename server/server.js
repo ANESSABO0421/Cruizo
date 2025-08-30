@@ -15,4 +15,4 @@ app.get("/", (req, res) => res.send("hello the server is running"));
 const port = process.env.PORT || 3000;
 
 // SERVER CREATING
-app.listen(port, () => console.log(`server is running on ${port}`));
+app.listen(port, () => console.log(`server is running on http://localhost:${port}`));
