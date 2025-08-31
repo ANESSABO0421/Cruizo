@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
     role: { type: String, enum: ["owner", "user"], default: "user" },
     Image: { type: String, default: "" },
   },
-  { timestamps: true } //for knowing when created
+  { timestamps: true } //for knowing when created will add createdAt and updatedAt
 );
 
 // collection created

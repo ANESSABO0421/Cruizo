@@ -1,5 +1,10 @@
 import express from "express";
-import { LoginUser, registerUser } from "../controllers/UserController";
+import {
+  getUserData,
+  LoginUser,
+  registerUser,
+} from "../controllers/UserController.js";
+import { protect } from "../middleware/Auth.js";
 
 // like router.js
 
@@ -10,5 +15,6 @@ userRouter.post("/register", registerUser); //just like rh.functionname
 
 // api for Login
 userRouter.post("/login", LoginUser);
+userRouter.get("/data", protect, getUserData);
 
 export default userRouter;

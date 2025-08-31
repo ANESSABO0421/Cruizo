@@ -1,6 +1,6 @@
 // requesthandler.js
 
-import User from "../models/user.js";
+import User from "../models/Users.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -56,6 +56,18 @@ export const LoginUser = async (req, res) => {
     // token genrate
     const token = generateToken(user._id.toString());
     res.json({ success: true, token });
+  } catch (error) {
+    console.log(error.message);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+// getting data using jwt token
+export const getUserData = async (req, res) => {
+  try {
+    // here we are not data passing the data is passed by the middleware
+    const { user } = req;
+    res.json({ success: true, user });
   } catch (error) {
     console.log(error.message);
     res.json({ success: false, message: error.message });
