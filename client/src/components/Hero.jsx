@@ -14,6 +14,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-center lg:flex-row gap-10 min-md:ml-8">
           {/* pickup location */}
           <div className="flex flex-col items-start gap-2">
+            <p>{pickupLocation ? pickupLocation : "Select a location:"}</p>
             <select
               required
               value={pickupLocation}
@@ -28,7 +29,6 @@ const Hero = () => {
                 </option>
               ))}
             </select>
-            <p>{pickupLocation ? pickupLocation : "select a location"}</p>
             {/*if location selected view else not */}
           </div>
           <div className="flex flex-col items-start gap-2">
